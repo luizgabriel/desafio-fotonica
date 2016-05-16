@@ -25,9 +25,9 @@ elixir(function(mix) {
         .copy(packages.bootstrap + 'js/bootstrap.min.js', 'public/js/bootstrap.min.js')
         .copy(packages.jquery + 'jquery.min.js', 'public/js/jquery.min.js')
         .copy(packages.font_awesome + 'fonts', 'public/fonts')
+        .copy(packages.font_awesome + 'css/font-awesome.min.css', 'public/css/font-awesome.min.css')
 
         .styles([
-            packages.font_awesome + 'css/font-awesome.min.css',
-            packages.resources + 'css/theme.css'
-        ], 'public/css/theme.min.css', '/')
+            'theme.css'
+        ], 'public/css/theme.min.css')
 });

@@ -22,17 +22,24 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container content-section text-left">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Ferramentas Utilizadas</h2>
-                <h3>Servidor</h3>
-                <ul>
-                    <li>Vagrant <small>Para configuração da maquina virtual</small></li>
-                </ul>
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Tecnologias Utilizadas</h2>
                 <h3>Backend</h3>
                 <ul>
-                    <li>Laravel <small>Framework para PHP</small></li>
+                    <li><span class="badge">Vagrant</span> <small>Para configuração da maquina virtual <b>linux</b></small></li>
+                    <li><span class="badge">Laravel</span> <small>Como framework de backend PHP</small></li>
+                    <li><span class="badge">PHP 5.6</span> <small>Linguagem de programação usada</small></li>
+                    <li><span class="badge">Mysql</span> <small>Banco de dados utilizado</small></li>
+                    <li><span class="badge">Pusher</span> <small>Sistema de mensagens Realtime</small></li>
+                    <li><span class="badge">Cron</span> <small>Para agendamento de tarefas</small></li>
+                </ul>
+                <h3>Fontend</h3>
+                <ul>
+                    <li><span class="badge">Javascript</span> <small>Linguagem de programação clientside</small></li>
+                    <li><span class="badge">Jquery</span> <small>Framework para <b>Javascript</b></small></li>
+                    <li><span class="badge">Bootstrap</span> <small>Framework para <b>CSS</b> e <b>Javascript</b></small></li>
                 </ul>
             </div>
         </div>
@@ -42,22 +49,22 @@
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-4 col-lg-offset-4">
+                <div class="col-lg-4 col-lg-offset-1">
                     <h2>Calculadora</h2>
 
                     <div id="calculator">
                         <table class="table table-bordered table-condensed">
                             <tr>
                                 <td colspan="4">
-                                    <input id="calculator-output" type="number" class="form-control"/>
+                                    <input id="calculator-output" value="0" type="number" class="form-control"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
-                                    <button class="btn btn-default btn-block"><i class="fa fa-long-arrow-left"></i></button>
-                                </td>
                                 <td colspan="1">
                                     <button class="btn btn-default btn-block">C</button>
+                                </td>
+                                <td colspan="2">
+                                    <button class="btn btn-default btn-block"><span class="fa fa-long-arrow-left"></span></button>
                                 </td>
                                 <td colspan="1">
                                     <button class="btn btn-default btn-block">/</button>
@@ -117,6 +124,11 @@
                             </tr>
                         </table>
                     </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <h1>Funcionalidades da Calculadora</h1>
+                    <p>Através da utlização de </p>
                 </div>
             </div>
         </div>
