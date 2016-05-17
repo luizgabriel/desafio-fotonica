@@ -49,7 +49,7 @@
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-4 col-lg-offset-1">
+                <div class="col-lg-4 col-lg-offset-4">
                     <h2>Calculadora</h2>
 
                     <div id="calculator">
@@ -126,10 +126,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7">
-                    <h1>Funcionalidades da Calculadora</h1>
-                    <p>Através da utlização de </p>
-                </div>
             </div>
         </div>
     </section>
@@ -138,32 +134,33 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+                <h2>Gerador de Número Aleatórios <b>em Background</b></h2>
+
+                <div class="col-lg-4">
+                    <p>Controle o Serviço de Gerador de Números</p>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="switch">
+                            <input id="toogle-random-generator" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                            <label for="toogle-random-generator"></label>
+                        </div>
+                    </div>
+                    <img src="{{ asset('img/help_tip.png') }}" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <p>Resultados exibidos via <span class="badge">Push Notifications</span></p>
+                    <textarea style="width: 100%" id="random-output" rows="10"></textarea>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
-
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <small>Encontre este projeto no Github.</small>
+            <a href="https://github.com/luizgabriel" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
         </div>
     </footer>
 
