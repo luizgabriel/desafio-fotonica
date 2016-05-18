@@ -177,7 +177,7 @@
     <footer>
         <div class="container text-center">
             <p>Encontre este projeto no Github.</p>
-            <a href="https://github.com/luizgabriel" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            <a href="https://github.com/luizgabriel/desafio-fotonica" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
         </div>
     </footer>
 
