@@ -3,6 +3,7 @@ var packages = {
     jquery: 'node_modules/jquery/dist/',
     bootstrap: 'node_modules/bootstrap/dist/',
     font_awesome: 'node_modules/font-awesome/',
+    pusher: 'node_modules/pusher-js/dist/',
     resources: 'resources/assets/'
 };
 
@@ -26,6 +27,7 @@ elixir(function(mix) {
         .copy(packages.jquery + 'jquery.min.js', 'public/js/jquery.min.js')
         .copy(packages.font_awesome + 'fonts', 'public/fonts')
         .copy(packages.font_awesome + 'css/font-awesome.min.css', 'public/css/font-awesome.min.css')
+        .copy(packages.pusher + 'web/pusher.min.js', 'public/js/pusher.min.js')
         .less(['theme.less','terminal.less'], 'public/css/app.min.css')
         .coffee(['Calculator.coffee', 'home.coffee'], 'public/js/home.min.js')
 });

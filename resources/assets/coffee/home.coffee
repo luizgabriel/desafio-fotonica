@@ -41,7 +41,24 @@ $(document).ready ->
       opcode = $(this).data('action')
     processAction(opcode)
 
+number_out = $('#random-output')
+sync = false
+consoleClear = () ->
+  number_out.html("")
+
+consoleOut = (message) ->
+  number_out.find('li').removeClass('current')
+  number_out.append("<li class=\"current\">#{message}</li>")
+
 pusher = new Pusher 'dc62f2019de851ad9f1b', encrypted: true
 channel = pusher.subscribe('number.create')
-channel.bind "Fotonica\\Events\\CreateRandomNumber", (data) ->
-  console.log data.number.value
+channel.bind 'Fotonica\\Events\\CreateNumberEvent', (data) ->
+  if not sync
+    sync = true
+    consoleClear()
+    consoleOut('Sincronizado!')
+  date = new Date().toLocaleDateString("pt-BR", {
+    hour12: false,
+    hour: "numeric",
+    minute: "numeric"})
+  consoleOut("Número gerado: #{data.number.value} | às #{date}")

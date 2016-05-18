@@ -165,7 +165,8 @@
                         </div>
                         <div class="terminal-body">
                             <ul id="random-output">
-                                <li class="current">Iniciando serviço...</li>
+                                <li>Sincronizando com o serviço...</li>
+                                <li class="current">Esperando mensagem...</li>
                             </ul>
                         </div>
                     </div>
