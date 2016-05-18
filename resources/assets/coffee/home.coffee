@@ -56,7 +56,6 @@ toogle_btn.change () ->
   .done (config) ->
     if config.number_generator_status == 1 then consoleOut('O serviço foi iniciado.')
     else if config.number_generator_status == 0 then consoleOut('O serviço foi parado.')
-    else console.log config
 
   if status == 1 then consoleOut('Iniciando o serviço...')
   else if status == 0 then consoleOut('Parando o serviço...')

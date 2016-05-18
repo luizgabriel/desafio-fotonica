@@ -166,7 +166,11 @@
                         <div class="terminal-body">
                             <ul id="random-output">
                                 <li>Sincronizando com o serviço...</li>
-                                <li class="current">Esperando mensagem...</li>
+                                @if ($config->number_generator_status == 1)
+                                    <li class="current">Esperando mensagem...</li>
+                                @else
+                                    <li class="current">O serviço está parado.</li>
+                                @endif
                             </ul>
                         </div>
                     </div>

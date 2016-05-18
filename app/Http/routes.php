@@ -9,7 +9,7 @@ $router->get('/', function () {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
 
-    $router->resource('server', 'API\ServerController', ['only' => 'update']);
+    $router->post('servers/{config}', 'API\ServerController@update');
 
 });
 
