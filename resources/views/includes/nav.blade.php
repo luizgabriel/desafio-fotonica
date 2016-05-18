@@ -18,7 +18,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">Ferramentas Utilizadas</a>
+                    <a class="page-scroll" href="#about">Ferramentas</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#download">Calculadora</a>

@@ -50,6 +50,11 @@ consoleOut = (message) ->
   number_out.find('li').removeClass('current')
   number_out.append("<li class=\"current\">#{message}</li>")
 
+total = $('#total')
+incrementTotal = () ->
+  current = parseInt(total.html())
+  total.html(current + 1)
+
 pusher = new Pusher 'dc62f2019de851ad9f1b', encrypted: true
 channel = pusher.subscribe('number.create')
 channel.bind 'Fotonica\\Events\\CreateNumberEvent', (data) ->
@@ -61,4 +66,5 @@ channel.bind 'Fotonica\\Events\\CreateNumberEvent', (data) ->
     hour12: false,
     hour: "numeric",
     minute: "numeric"})
-  consoleOut("Número gerado: #{data.number.value} | às #{date}")
+  incrementTotal()
+  consoleOut("Número gerado: #{data.number.value} | em #{date}")

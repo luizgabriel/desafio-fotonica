@@ -4,6 +4,7 @@ var packages = {
     bootstrap: 'node_modules/bootstrap/dist/',
     font_awesome: 'node_modules/font-awesome/',
     pusher: 'node_modules/pusher-js/dist/',
+    animate: 'node_modules/animate.css/',
     resources: 'resources/assets/'
 };
 
@@ -28,6 +29,7 @@ elixir(function(mix) {
         .copy(packages.font_awesome + 'fonts', 'public/fonts')
         .copy(packages.font_awesome + 'css/font-awesome.min.css', 'public/css/font-awesome.min.css')
         .copy(packages.pusher + 'web/pusher.min.js', 'public/js/pusher.min.js')
+        .copy(packages.animate + 'animate.min.css', 'public/css/animate.min.css')
         .less(['theme.less','terminal.less'], 'public/css/app.min.css')
         .coffee(['Calculator.coffee', 'home.coffee'], 'public/js/home.min.js')
 });

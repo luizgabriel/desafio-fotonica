@@ -48,7 +48,7 @@
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
+    <section style="background-color: #000; color: #fff" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-4 col-lg-offset-4">
@@ -142,19 +142,19 @@
 
                 <div class="col-lg-4">
                     <p>Controle o Serviço de Gerador de Números</p>
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="switch">
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-4">
+                        <div class="switch animated fadeIn">
                             <input id="toogle-random-generator" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
                             <label for="toogle-random-generator"></label>
                         </div>
                     </div>
-                    <img src="{{ asset('img/help_tip.png') }}" alt="">
+                    <img class="animated slideInUp" src="{{ asset('img/help_tip.png') }}" alt="">
                 </div>
 
                 <div class="col-lg-8">
                     <p>Resultados exibidos via <span class="badge">Push Notifications</span></p>
 
-                    <div class="terminal-window">
+                    <div class="terminal-window animated bounceIn">
                         <div class="terminal-header">
                             <div class="pull-left">
                                 <div class="circle circle-red"></div>
@@ -170,6 +170,14 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="tooltip bottom animated slideInUp" style="display: block; opacity: 1">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner">
+                            Total de números gerados: <span id="total">{{ \Fotonica\Number::count() }}</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
