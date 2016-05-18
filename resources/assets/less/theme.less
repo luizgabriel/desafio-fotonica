@@ -65,14 +65,36 @@ a:focus {
     font-weight: 400;
 }
 
+@keyframes bg-change {
+    0% {
+        background-color: #df3456;
+    }
+    25% {
+        background-color: #7aaf77;
+    }
+    50% {
+        background-color: #734283;
+    }
+    75% {
+        background-color: #734283;
+    }
+    100% {
+        background-color: #2f4f4f;
+    }
+}
+
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #42dca3 !important;
     padding: 10px 0 !important;
-    color: #222;
+    transition: all 0.3s ease-out;
+    animation-name: bg-change;
+    color: #fff;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 .navbar-custom .navbar-brand {

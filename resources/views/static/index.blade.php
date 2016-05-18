@@ -40,6 +40,8 @@
                     <li><span class="badge">Javascript</span> <small>Linguagem de programação clientside</small></li>
                     <li><span class="badge">Jquery</span> <small>Framework para <b>Javascript</b></small></li>
                     <li><span class="badge">Bootstrap</span> <small>Framework para <b>CSS</b> e <b>Javascript</b></small></li>
+                    <li><span class="badge">Less</span> <small>Preprocessador <b>CSS</b></small></li>
+                    <li><span class="badge">Coffescript</span> <small>Preprocessador <b>Javascript</b></small></li>
                 </ul>
             </div>
         </div>
