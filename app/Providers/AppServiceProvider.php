@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Fotonica\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

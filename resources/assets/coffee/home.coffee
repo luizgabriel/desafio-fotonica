@@ -41,3 +41,7 @@ $(document).ready ->
       opcode = $(this).data('action')
     processAction(opcode)
 
+pusher = new Pusher 'dc62f2019de851ad9f1b', encrypted: true
+channel = pusher.subscribe('number.create')
+channel.bind "Fotonica\\Events\\CreateRandomNumber", (data) ->
+  console.log data.number.value

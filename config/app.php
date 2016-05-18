@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Fotonica\Providers\AppServiceProvider::class,
+        Fotonica\Providers\AuthServiceProvider::class,
+        Fotonica\Providers\EventServiceProvider::class,
+        Fotonica\Providers\RouteServiceProvider::class,
 
     ],
 
