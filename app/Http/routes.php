@@ -1,16 +1,17 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+/* @var \Illuminate\Routing\Router $router */
 
-Route::get('/', function () {
-    return view('static.index');
+$router->get('/', function () {
+    $config = \Fotonica\ServerConfiguration::find(1);
+    return view('static.index', compact('config'));
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+
+    $router->resource('server', 'API\ServerController', ['only' => 'update']);
+
+});
+
+
+

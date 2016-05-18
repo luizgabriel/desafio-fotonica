@@ -144,7 +144,7 @@
                     <p>Controle o Serviço de Gerador de Números</p>
                     <div class="col-lg-8 col-lg-offset-2 col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-4">
                         <div class="switch animated fadeIn">
-                            <input id="toogle-random-generator" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                            <input id="toogle-random-generator" {{ ($config->number_generator_status == 1)? 'check' : '' }} class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
                             <label for="toogle-random-generator"></label>
                         </div>
                     </div>
