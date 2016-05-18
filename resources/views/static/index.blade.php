@@ -22,7 +22,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-left">
+    <section id="about" class="container content-section">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <h2>Tecnologias Utilizadas</h2>
@@ -52,19 +52,19 @@
                 <div class="col-lg-4 col-lg-offset-4">
                     <h2>Calculadora</h2>
 
-                    <div id="calculator">
+                    <div class="calculator" id="main-calculator">
                         <table class="table table-bordered table-condensed">
                             <tr>
                                 <td colspan="4">
-                                    <input id="calculator-output" value="0" type="number" class="form-control"/>
+                                    <span class="calculator-output">0</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="1">
-                                    <button class="btn btn-default btn-block">C</button>
+                                    <button class="btn btn-default btn-block" data-action="clear">C</button>
                                 </td>
                                 <td colspan="2">
-                                    <button class="btn btn-default btn-block"><span class="fa fa-long-arrow-left"></span></button>
+                                    <button class="btn btn-default btn-block" data-action="backspace"><span class="fa fa-long-arrow-left"></span></button>
                                 </td>
                                 <td colspan="1">
                                     <button class="btn btn-default btn-block">/</button>
@@ -117,7 +117,9 @@
                                 <td>
                                     <button class="btn btn-default btn-block">0</button>
                                 </td>
-                                <td></td>
+                                <td>
+                                    <button class="btn btn-default btn-block">.</button>
+                                </td>
                                 <td>
                                     <button class="btn btn-default btn-block">=</button>
                                 </td>
@@ -149,7 +151,22 @@
 
                 <div class="col-lg-8">
                     <p>Resultados exibidos via <span class="badge">Push Notifications</span></p>
-                    <textarea style="width: 100%" id="random-output" rows="10"></textarea>
+
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="pull-left">
+                                <div class="circle circle-red"></div>
+                                <div class="circle circle-yellow"></div>
+                                <div class="circle circle-green"></div>
+                            </div>
+                            <div class="terminal-title">Gerador de Números Randômicos</div>
+                        </div>
+                        <div class="terminal-body">
+                            <ul id="random-output">
+                                <li class="current">Iniciando serviço...</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -159,7 +176,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <small>Encontre este projeto no Github.</small>
+            <p>Encontre este projeto no Github.</p>
             <a href="https://github.com/luizgabriel" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
         </div>
     </footer>

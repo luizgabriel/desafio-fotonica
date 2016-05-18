@@ -26,6 +26,8 @@ elixir(function(mix) {
         .copy(packages.jquery + 'jquery.min.js', 'public/js/jquery.min.js')
         .copy(packages.font_awesome + 'fonts', 'public/fonts')
         .copy(packages.font_awesome + 'css/font-awesome.min.css', 'public/css/font-awesome.min.css')
+        .less('terminal.less', 'public/css/terminal.min.css')
+        .coffee(['Calculator.coffee', 'home.coffee'], 'public/js/home.min.js')
 
         .styles([
             'theme.css'
