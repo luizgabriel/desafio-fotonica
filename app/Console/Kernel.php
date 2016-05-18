@@ -28,10 +28,6 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command('number:random')
-            ->everyMinute()
-            ->when(function () {
-                $config = ServerConfiguration::findOrFail(1);
-                return $config->number_generator_status;
-            });;
+            ->everyMinute();
     }
 }

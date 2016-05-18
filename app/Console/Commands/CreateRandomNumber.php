@@ -30,8 +30,11 @@ class CreateRandomNumber extends Command
      */
     public function handle()
     {
-        $number = Number::create(['value' => rand(0, 10000)]);
-        event(new CreateNumberEvent($number));
+        $config = ServerConfiguration::findOrFail(1);
+        if ($config->number_generator_status == 1) {
+            $number = Number::create(['value' => rand(0, 10000)]);
+            event(new CreateNumberEvent($number));
+        }
     }
 
     /**
