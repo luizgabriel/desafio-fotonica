@@ -52,7 +52,7 @@ sync = false
 
 toogle_btn.change () ->
   status = if $(this).prop('checked') then 1 else 0
-  $.post('/api/server/1', {_method: 'put', _token: TOKEN, number_generator_status: status})
+  $.post('/api/servers/1', {_method: 'put', _token: TOKEN, number_generator_status: status})
   .done (config) ->
     if config.number_generator_status == 1 then consoleOut('O serviço foi iniciado.')
     else if config.number_generator_status == 0 then consoleOut('O serviço foi parado.')

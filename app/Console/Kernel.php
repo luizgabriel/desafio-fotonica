@@ -3,6 +3,7 @@
 namespace Fotonica\Console;
 
 use Fotonica\Console\Commands\CreateRandomNumber;
+use Fotonica\ServerConfiguration;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -27,6 +28,10 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command('number:random')
-            ->everyMinute();
+            ->everyMinute()
+            ->when(function () {
+                $config = ServerConfiguration::findOrFail(1);
+                return $config->number_generator_status;
+            });;
     }
 }
