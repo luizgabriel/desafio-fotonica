@@ -4,6 +4,7 @@ namespace Fotonica\Console\Commands;
 
 use Fotonica\Events\CreateNumberEvent;
 use Fotonica\Number;
+use Fotonica\ServerConfiguration;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 

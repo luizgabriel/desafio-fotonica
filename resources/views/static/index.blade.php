@@ -9,8 +9,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">DESAFIO FOTÔNICA</h1>
-                        <p class="intro-text">Rodando exclusivamente em uma maquina virtual configurada utilizando uma ferramenta chamada
+                        <h1 class="brand-heading animated slideInDown">DESAFIO FOTÔNICA</h1>
+                        <p class="intro-text animated slideInUp">Rodando exclusivamente em uma maquina virtual configurada utilizando uma ferramenta chamada
                             <a href="https://www.vagrantup.com/">Vagrant</a></p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -22,7 +22,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section">
+    <section id="about" class="container content-section animated fadeIn">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <h2>Tecnologias Utilizadas</h2>
@@ -144,7 +144,7 @@
                     <p>Controle o Serviço de Gerador de Números</p>
                     <div class="col-lg-8 col-lg-offset-2 col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-4">
                         <div class="switch animated fadeIn">
-                            <input id="toogle-random-generator" {{ ($config->number_generator_status == 1)? 'check' : '' }} class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                            <input id="toogle-random-generator" {{ ($config->number_generator_status == 1)? 'checked' : '' }} class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
                             <label for="toogle-random-generator"></label>
                         </div>
                     </div>
